@@ -32,3 +32,10 @@ jobs:
           cd wireguard-go
           chmod 0755 ./* 
           make
+           
+      - name : Upload artifact
+        uses: actions/upload-artifact@master
+        with:
+         name: wireguard-go
+         path: wireguard-go/wireguard-go
+      
